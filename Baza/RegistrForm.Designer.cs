@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_FIO = new System.Windows.Forms.TextBox();
+            this.textBox_n_m = new System.Windows.Forms.TextBox();
+            this.textBox_porolRet = new System.Windows.Forms.TextBox();
+            this.textBox_porol = new System.Windows.Forms.TextBox();
             this.Registrlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox_login = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -50,44 +52,44 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBox_FIO
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 68);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 25);
-            this.textBox1.TabIndex = 1;
+            this.textBox_FIO.Location = new System.Drawing.Point(163, 68);
+            this.textBox_FIO.Multiline = true;
+            this.textBox_FIO.Name = "textBox_FIO";
+            this.textBox_FIO.Size = new System.Drawing.Size(138, 25);
+            this.textBox_FIO.TabIndex = 1;
             // 
-            // textBox2
+            // textBox_n_m
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 126);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 25);
-            this.textBox2.TabIndex = 2;
+            this.textBox_n_m.Location = new System.Drawing.Point(163, 116);
+            this.textBox_n_m.Multiline = true;
+            this.textBox_n_m.Name = "textBox_n_m";
+            this.textBox_n_m.Size = new System.Drawing.Size(138, 25);
+            this.textBox_n_m.TabIndex = 2;
             // 
-            // textBox3
+            // textBox_porolRet
             // 
-            this.textBox3.Location = new System.Drawing.Point(163, 257);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 25);
-            this.textBox3.TabIndex = 3;
+            this.textBox_porolRet.Location = new System.Drawing.Point(163, 257);
+            this.textBox_porolRet.Multiline = true;
+            this.textBox_porolRet.Name = "textBox_porolRet";
+            this.textBox_porolRet.Size = new System.Drawing.Size(138, 25);
+            this.textBox_porolRet.TabIndex = 3;
             // 
-            // textBox4
+            // textBox_porol
             // 
-            this.textBox4.Location = new System.Drawing.Point(163, 202);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 25);
-            this.textBox4.TabIndex = 4;
+            this.textBox_porol.Location = new System.Drawing.Point(163, 202);
+            this.textBox_porol.Multiline = true;
+            this.textBox_porol.Name = "textBox_porol";
+            this.textBox_porol.Size = new System.Drawing.Size(138, 25);
+            this.textBox_porol.TabIndex = 4;
             // 
             // Registrlabel
             // 
             this.Registrlabel.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.Registrlabel.Location = new System.Drawing.Point(170, 19);
+            this.Registrlabel.Location = new System.Drawing.Point(160, 9);
             this.Registrlabel.Name = "Registrlabel";
-            this.Registrlabel.Size = new System.Drawing.Size(72, 20);
+            this.Registrlabel.Size = new System.Drawing.Size(131, 31);
             this.Registrlabel.TabIndex = 5;
             this.Registrlabel.Text = "Регистрация";
             // 
@@ -102,11 +104,11 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(35, 119);
+            this.label2.Location = new System.Drawing.Point(10, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 32);
+            this.label2.Size = new System.Drawing.Size(125, 32);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Почта или номер телефона";
+            this.label2.Text = "Электронный адресс или номер телефона";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -117,6 +119,7 @@
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Пороль";
+       
             // 
             // label4
             // 
@@ -127,20 +130,38 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Повторите пороль";
             // 
+            // textBox_login
+            // 
+            this.textBox_login.Location = new System.Drawing.Point(163, 157);
+            this.textBox_login.Multiline = true;
+            this.textBox_login.Name = "textBox_login";
+            this.textBox_login.Size = new System.Drawing.Size(138, 25);
+            this.textBox_login.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(46, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Логин";
+            // 
             // RegistrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 353);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox_login);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Registrlabel);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_porol);
+            this.Controls.Add(this.textBox_porolRet);
+            this.Controls.Add(this.textBox_n_m);
+            this.Controls.Add(this.textBox_FIO);
             this.Controls.Add(this.button1);
             this.Name = "RegistrForm";
             this.Text = "RegistrForm";
@@ -153,14 +174,16 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_FIO;
+        private System.Windows.Forms.TextBox textBox_n_m;
+        private System.Windows.Forms.TextBox textBox_porolRet;
+        private System.Windows.Forms.TextBox textBox_porol;
         private System.Windows.Forms.Label Registrlabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_login;
+        private System.Windows.Forms.Label label5;
     }
 }

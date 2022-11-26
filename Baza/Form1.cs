@@ -14,13 +14,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Baza
 {
 
-
-    public partial class Form1_auth2 : Form
+    public partial class Form1_auth2 : MetroFramework.Forms.MetroForm
+    //public partial class Form1_auth2 : Form
     {
         public Form1_auth2()
         {
             InitializeComponent();
         }
+
         static class Auth
         {
             //Статичное поле, которое хранит значение статуса авторизации
@@ -30,7 +31,7 @@ namespace Baza
             //Статичное поле, которое хранит значения ФИО пользователя
             public static string auth_fio = null;
             //Статичное поле, которое хранит количество привелегий пользователя
-            public static int auth_role = 0;
+           // public static int auth_role = 0;
         }
         // строка подключения к БД
       //  string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_6;database=is_1_20_st6_KURS;password=40112334;";
@@ -81,8 +82,20 @@ namespace Baza
         Form2_auth1 f2 = new Form2_auth1();
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Введите логин", "Ошибка");
+                return;
+            }
+
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("Введите пороль", "Ошибка");
+                return;
+            }
             //Запрос в БД на предмет того, если ли строка с подходящим логином и паролем
-            string sql = "SELECT * FROM t_user WHERE loginUser = @un and  passUser= @up";
+            string sql = "SELECT * FROM t_user WHERE loginUser = @un and  passUser = @up";
             //Открытие соединения
             conn.Open();
             //Объявляем таблицу
@@ -168,6 +181,13 @@ namespace Baza
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        RegistrForm f1 = new RegistrForm();
+        private void button_reg_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            f1.ShowDialog();
+            this.Show();
         }
     }
 }
