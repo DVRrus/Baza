@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ClassLibrary1;
 
 namespace Baza
 {
@@ -21,8 +22,8 @@ namespace Baza
         {
             InitializeComponent();
         }
-
-        static class Auth
+    
+       public class Auth
         {
             //Статичное поле, которое хранит значение статуса авторизации
             public static bool auth = false;
@@ -53,7 +54,7 @@ namespace Baza
             }
             return hash.ToString();
         }
-
+     
         //Метод запроса данных пользователя по логину для запоминания их в полях класса
         public void GetUserInfo(string login_user)
         {
@@ -79,7 +80,7 @@ namespace Baza
                             // закрываем соединение с БД
             conn.Close();
         }
-        Form2_auth1 f2 = new Form2_auth1();
+     
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -124,13 +125,15 @@ namespace Baza
                 //Достаем данные пользователя в случае успеха
                 GetUserInfo(textBox1.Text);
                 MessageBox.Show("Вы авторезировались");
-              //  f2.ShowDialog();
+                //  f2.ShowDialog();
                 //Закрываем форму
-             //this.Close();
-//f2.ShowDialog();
-              this.Hide();
-               f2.ShowDialog();
-                this.Show();
+                //this.Close();
+                //f2.ShowDialog();
+
+                this.Hide();
+                return;
+                //    this.Show();
+              
             }
             else
             {
@@ -165,6 +168,7 @@ namespace Baza
         private void Form1_auth2_Load_1(object sender, EventArgs e)
         {
             conn = new MySqlConnection(connStr);
+            
 
         }
 
@@ -182,11 +186,11 @@ namespace Baza
         {
 
         }
-        RegistrForm f1 = new RegistrForm();
+       
         private void button_reg_Click(object sender, EventArgs e)
         {
             this.Hide();
-            f1.ShowDialog();
+          // f1.ShowDialog();
             this.Show();
         }
     }
